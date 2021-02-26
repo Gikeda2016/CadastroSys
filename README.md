@@ -2,7 +2,10 @@
 
 Cadastro simples usando arquivo txt em Python
 
-Este programa permite treinar iniciantes em Python(como eu) criando funções básicas: 1- Listar, cadastrar, alterar, apagar, localizar e ordenar o cadastro existente. 
+Este programa permite treinar iniciantes em Python(como eu) criando funções básicas: 
+
+1- Listar, cadastrar, alterar, apagar, localizar e ordenar o cadastro existente. 
+
 2- Implementar formato modular e faz algumas validações usando (try, except)
 
 Utiliza padrão package(pyCharm) e versionamento via Git/GitHub.
