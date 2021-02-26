@@ -7,7 +7,6 @@ from Lib.arquivo import *
 from Lib import interface as mens
 from time import sleep
 
-
 def CadastroSys():
     ''' Criar cadastro de pessoas (nome, idade).
         Funcionalidade para cadastrar e visualizar o cadastro
@@ -28,7 +27,7 @@ def CadastroSys():
         opc = mens.menu( titulo, menu_lista)
         if opc == 1:
             showcad('PESSOAS CADASTRADAS', readcad())   
-            sleep(2)  
+            sleep(4)  
         elif opc == 2:
             insertcad() 
             sleep(2)
@@ -46,7 +45,7 @@ def CadastroSys():
             mens.typewriter(' ... Classificando o cadastro ...', cor=mens.green_ )
             showcad(' CADASTRO CLASSIFICADO...', readcad())
             sleep(4)
-        elif opc == 7:
+        elif opc == 9:
             mens.imp_titulo(f'{mens.green_} Saindo do sistema... Até Logo!{mens.default_}')
             sleep(2)
             break

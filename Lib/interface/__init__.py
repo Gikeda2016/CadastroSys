@@ -1,9 +1,9 @@
 from time import sleep
-from datetime import date
 from Lib import valida as val
 from colorama import init
 init()
 
+''' Cores ANSI - ativadas por Colorama em init()'''
 default_ =  '\33[m'  ## cor padrão
 green_ = '\33[0;32m' ## letra verde
 green_bold = '\33[1;32m' ## letra verde bold
@@ -23,23 +23,30 @@ def plin(tam=50, tipo='-'):
 
 
 def imp_titulo(mensag, tam=50):
-    ''' Imprime Cabeçalho '''
+    ''' Imprime mensagem entre linhas.
+    '''
     plin(tam)
     print(f'{yellow_}{mensag:^{tam}}{default_}')
     plin(tam)
 
 
 def menu(titulo, lista):
-    ''' Cria menu através da lista   '''
+    ''' Cria menu através da lista.
+        :titulo - cabeçalho
+        :lista - opções numeradas 1,2,3..,9 para escolher
+    '''
     print()
     imp_titulo(titulo)
-    for i, item in enumerate(lista):
-        print(f' {yellow_}({i+1}){default_}: {blue_bold}{lista[i]}{default_}')
-    plin()
+    lt_opcao = list(range(1, len(lista)+1))   # numera as opções 1,2,3,..,9
+    lt_opcao[-1] = 9   ## para definir 9 como saida
+    dig = len(lista)//10 + 1
+    for i, item in enumerate(lista):  
+        print(f' {yellow_}({lt_opcao[i]:0d}){default_}: {blue_bold}{item}{default_}')
+    plin()  
     while True:
         opcao = val.leiainteiro(' Sua Opção: ')
-        if opcao not in list(range(1,len(lista)+1)):
-            print(f'{red_} Erro: Escolha uma opção válida{green_} {list(range(1, len(lista)+1))}{default_}')
+        if opcao not in lt_opcao:
+            print(f'{red_} Erro: Escolha uma opção válida{green_} {lt_opcao}{default_}')
             sleep(2)
         else:
             break
@@ -47,7 +54,12 @@ def menu(titulo, lista):
 
 
 def print_title(titulo, tipo = '-', cor = title_):
-    ''' imprime titulo centrado '''
+    ''' imprime titulo centrado.
+        :titulo - cabeçalho
+        :tipo - caracter da linha
+        :cor - cores possuiveis ANSI ou green_, red_, ...
+    '''
+
     tam = len(titulo)+12
     print(f'{tipo}'*tam)
     typewriter(f'{titulo:^{tam}}', cor = cor )
@@ -68,14 +80,19 @@ def typewriter(palavra, tempo = 0.1, cor = default_):
 
 
 def efim():
+    ''' Pergunta se quer continuar.
+        Retorna: True ou False
+    '''
     print()
-    if str(input(' Quer continuar? [S/N]: ')).upper()[0] in 'N':
+    if val.leiastring(' Quer continuar? [S/N]: ') in 'nN':
         return True
     else:
         return False
 
 
 def print_end():
+    ''' Mensagem de despedida - cor verde
+    '''
     print()
     typewriter(f'  .... {green_}Mais uma conquista, siga em frente !!{default_}  .....', 0.001)
     print()

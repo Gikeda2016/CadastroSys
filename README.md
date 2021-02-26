@@ -12,6 +12,9 @@ Utiliza padrão package(pyCharm) e versionamento via Git/GitHub.
 
 Arquivo cadastro.txt contém (Nome, idade) armazenado no formato tuple.
 
+Foi usado cores ANSI para animar o ambiente, mas é bom fazê-lo no final 
+quando tudo estiver funcionando porque polui muito o programa e atrapalha no entendimento dos comandos.
+
 Agradeço ao prof. Guanabara (Cursoemvideo-Mundo3-Python) por estimular e orientar para criar este mini-sistema com algumas funções adicionais.
 
 25/02/2021
