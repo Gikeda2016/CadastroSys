@@ -3,12 +3,9 @@
 from colorama import init
 init()
 
-
 from Lib.arquivo import *
 from Lib import interface as mens
 from time import sleep
-
-
 
 
 def CadastroSys():
@@ -29,9 +26,7 @@ def CadastroSys():
                         'Sair do programa'  ]
         titulo = 'MENU PRINCIPAL: CADASTRO'
         opc = mens.menu( titulo, menu_lista)
-
         if opc == 1:
-
             showcad('PESSOAS CADASTRADAS', readcad())   
             sleep(2)  
         elif opc == 2:
@@ -51,7 +46,6 @@ def CadastroSys():
             mens.typewriter(' ... Classificando o cadastro ...', cor=mens.green_ )
             showcad(' CADASTRO CLASSIFICADO...', readcad())
             sleep(4)
-
         elif opc == 7:
             mens.imp_titulo(f'{mens.green_} Saindo do sistema... Até Logo!{mens.default_}')
             sleep(2)
