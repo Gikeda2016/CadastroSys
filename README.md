@@ -15,6 +15,10 @@ Arquivo cadastro.txt contém (Nome, idade) armazenado no formato tuple.
 Foi usado cores ANSI para animar o ambiente, mas é bom fazê-lo no final 
 quando tudo estiver funcionando porque polui muito o programa e atrapalha no entendimento dos comandos.
 
-Agradeço ao prof. Guanabara (Cursoemvideo-Mundo3-Python) por estimular e orientar para criar este mini-sistema com algumas funções adicionais.
+Agradeço ao prof. Guanabara (Cursoemvideo-Mundo3-Python) por estimular e 
+orientar para criar este mini-sistema para conclusão do curso de Python Mundo 3.
 
-25/02/2021
+
+Muito Obrigado, prof. Guanabara.
+
+26/02/2021
