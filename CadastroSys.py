@@ -54,7 +54,8 @@ def CadastroSys():
             sleep(2)
 
 
-def main():
+if __name__ == '__main__':
+    
     CadastroSys()
 
-main()
+
